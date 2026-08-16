@@ -1,7 +1,7 @@
 export default function UnauthorizedPage() {
   return (
     <div className="auth-shell">
-      <div>
+      <div className="auth-shell-inner">
         <div className="auth-brand" style={{ justifyContent: "center" }}>
           <div className="brand-mark" />
           <div className="auth-brand-text">

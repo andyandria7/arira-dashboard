@@ -36,7 +36,7 @@ export default function LoginPage() {
 
   return (
     <div className="auth-shell">
-      <div>
+      <div className="auth-shell-inner">
         <div className="auth-brand">
           <div className="brand-mark" />
           <div className="auth-brand-text">

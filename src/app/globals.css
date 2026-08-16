@@ -92,7 +92,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body { max-width: 100vw; }
+html, body { max-width: 100vw; overflow-x: hidden; }
 
 body {
   background: var(--bg);
@@ -306,6 +306,7 @@ footer.note { margin-top: 26px; font-size: 11.5px; color: var(--ink-faint); disp
 
 /* ─── Auth (login) ───────────────────────────────────────────────────────── */
 .auth-shell {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -316,6 +317,8 @@ footer.note { margin-top: 26px; font-size: 11.5px; color: var(--ink-faint); disp
     radial-gradient(circle at 84% 78%, color-mix(in srgb, var(--e-peur) 14%, transparent), transparent 46%),
     var(--bg);
 }
+
+.auth-shell-inner { width: 100%; max-width: 380px; margin: 0 auto; }
 
 .auth-brand { display: flex; align-items: center; gap: 11px; margin-bottom: 26px; }
 .auth-brand .brand-mark { width: 34px; height: 34px; }
