@@ -36,37 +36,53 @@ export default function LoginPage() {
 
   return (
     <div className="auth-shell">
-      <div className="card auth-card" style={{ padding: 28 }}>
-        <h1 className="display">Arira Admin</h1>
-        <p className="lede">Connecte-toi avec ton compte Arira habituel.</p>
-        <form onSubmit={handleSubmit}>
-          <div className="auth-field">
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              autoComplete="email"
-            />
+      <div>
+        <div className="auth-brand">
+          <div className="brand-mark" />
+          <div className="auth-brand-text">
+            <div className="display">Arira</div>
+            <div className="sub">Espace admin</div>
           </div>
-          <div className="auth-field">
-            <label htmlFor="password">Mot de passe</label>
-            <input
-              id="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              autoComplete="current-password"
-            />
-          </div>
-          {error && <p className="auth-error">{error}</p>}
-          <button className="auth-submit" type="submit" disabled={loading}>
-            {loading ? "Connexion…" : "Se connecter"}
-          </button>
-        </form>
+        </div>
+
+        <div className="card auth-card">
+          <h1 className="display">Connexion</h1>
+          <p className="lede">Utilise ton compte Arira habituel — l&apos;accès est vérifié côté serveur.</p>
+          <form onSubmit={handleSubmit}>
+            <div className="auth-field">
+              <label htmlFor="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="toi@exemple.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                autoComplete="email"
+              />
+            </div>
+            <div className="auth-field">
+              <label htmlFor="password">Mot de passe</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                autoComplete="current-password"
+              />
+            </div>
+            {error && (
+              <p className="auth-error">
+                <span>⚠</span> {error}
+              </p>
+            )}
+            <button className="auth-submit" type="submit" disabled={loading}>
+              {loading ? "Connexion…" : "Se connecter"}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
