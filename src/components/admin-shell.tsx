@@ -149,9 +149,16 @@ export function AdminShell({
 
         <div className="sidebar-footer">
           <div className="avatar-chip">{initials}</div>
-          <div style={{ flex: 1 }}>
-            <div className="who">{who}</div>
+          <div className="sidebar-footer-info">
+            <div className="who" title={who}>
+              {who}
+            </div>
             <button className="logout-link" type="button" onClick={handleLogout}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" y1="12" x2="9" y2="12" />
+              </svg>
               Se déconnecter
             </button>
           </div>
